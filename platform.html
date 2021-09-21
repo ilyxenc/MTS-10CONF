@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>MTS 10CONF</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="ru">
+    <meta name="generator" content="N/A">
+    <meta name="language" content="Russian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link type="text/css" rel="stylesheet" href="./fonts/fonts.css">
+    <link type="text/css" rel="stylesheet" href="./css/index.css">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <img src="./images/logo.png" alt="" class="logo">
+
+        <div class="blockMax1170 marginTop1" id="video">
+            <div class="video">
+                <img src="./images/translation.png" alt="" class="videoFrame">
+            </div>
+            <script type="text/javascript">
+                let video = document.querySelector(".video")
+                videoBlock = document.querySelector("#video");
+
+                videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+                video.style.height = video.offsetWidth / 16 * 9 + "px";
+
+                window.addEventListener("resize", () => {
+                    videoBlock.style.height = video.offsetWidth / 16 * 9 + "px";
+                    video.style.height = video.offsetWidth / 16 * 9 + "px";
+                })
+            </script>
+            <div class="chat1">
+                <div class="chatLabel">
+                    <p class="chatLabelText">
+                        Общий чат
+                    </p>
+                </div>
+                <div class="messages">
+                    <div class="message">
+                        <p class="messageName">
+                            Елена
+                        </p>
+                        <p class="messageText">
+                            🖐️ Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                    <div class="message messageMine">
+                        <p class="messageName">
+                            Сергей
+                        </p>
+                        <p class="messageText">
+                            Что позволяет сделать текст более привлекательным и живым для визуально-слухового
+                            восприятия.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Артём
+                        </p>
+                        <p class="messageText">
+                            При создании генератора 😀 мы использовали небезизвестный универсальный код речей. Текст
+                            генерируется абзацами случайным образом от двух до десяти предложений в абзаце.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Ольга
+                        </p>
+                        <p class="messageText">
+                            Вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском
+                            языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+                        </p>
+                    </div>
+                </div>
+                <div class="inputField">
+                    <div class="inputFieldBg">
+                        <img src="./images/icon/emoji.png" alt="" class="inputEmoji" onclick="showEmoji();">
+                        <img src="./images/icon/sticker.png" alt="" class="inputSticker">
+                        <textarea class="input" id="textarea" name="message" rows="1" value=""
+                            placeholder="Введите сообщение"></textarea>
+                        <img src="./images/icon/send-2.png" alt="" class="chatSend">
+
+                        <emoji-picker class="dark" id="emoji1" data-show="0" locale="ru"></emoji-picker>
+                        <script>
+                            document.querySelector('#emoji1').addEventListener('emoji-click', (event) => {
+                                let position = document.querySelector("#textarea").selectionStart,
+                                    val = document.querySelector("#textarea").value,
+                                    lenOld = document.querySelector("#textarea").value.length;
+                                document.querySelector("#textarea").value = [val.slice(0, position), event.detail.unicode, val.slice(position)].join('');
+                                document.querySelector("#textarea").focus();
+                                document.querySelector("#textarea").selectionEnd = position + document.querySelector("#textarea").value.length - lenOld;
+                            });
+
+                            let showEmoji = () => {
+                                let status = document.querySelector('#emoji1').dataset.show;
+
+                                if (status == 0) {
+                                    document.querySelector('#emoji1').style.display = "block";
+                                    document.querySelector('#emoji1').dataset.show = 1;
+                                } else {
+                                    document.querySelector('#emoji1').style.display = "none";
+                                    document.querySelector('#emoji1').dataset.show = 0;
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./images/shape/1.png" alt="" class="shape1">
+        </div>
+
+        <div class="blockMax1170">
+            <div class="chat2">
+                <div class="chatLabel">
+                    <p class="chatLabelText">
+                        Вопросы спикеру
+                    </p>
+                </div>
+                <div class="messages">
+                    <div class="message">
+                        <p class="messageName">
+                            Елена
+                        </p>
+                        <p class="messageText">
+                            🖐️ Сайт рыбатекст поможет дизайнеру, верстальщику.
+                        </p>
+                    </div>
+                    <div class="message messageMine">
+                        <p class="messageName">
+                            Сергей
+                        </p>
+                        <p class="messageText">
+                            Что позволяет сделать текст более привлекательным и живым для визуально-слухового
+                            восприятия.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Артём
+                        </p>
+                        <p class="messageText">
+                            При создании генератора 😀 мы использовали небезизвестный универсальный код речей. Текст
+                            генерируется абзацами случайным образом от двух до десяти предложений в абзаце.
+                        </p>
+                    </div>
+                    <div class="message">
+                        <p class="messageName">
+                            Ольга
+                        </p>
+                        <p class="messageText">
+                            Вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском
+                            языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+                        </p>
+                    </div>
+                </div>
+                <div class="inputField">
+                    <div class="inputFieldBg">
+                        <textarea class="input" name="message" rows="1" value=""
+                            placeholder="Введите сообщение"></textarea>
+                        <img src="./images/icon/send-2.png" alt="" class="chatSend">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blockMax1170 marginTop1">
+            <p class="caption">Расписание</p>
+
+            <div class="scheduleBlock">
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">13:00</p>
+                        <div>
+                            <p class="scheduleName">Начало трансляции</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">13:15</p>
+                        <div>
+                            <p class="scheduleName">Neal Ford <span>Software Architect, and Meme Wrangler at
+                                    Thoughtworks</span></p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        «Architecture styles and patterns»
+                    </p>
+                    <p class="scheduleDescription">
+                        Topic include software architecture, continuous delivery, functional programming, cutting edge
+                        software innovations
+                    </p>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">14:00</p>
+                        <div>
+                            <p class="scheduleName">Александр Петрухин <span>Руководитель направления системной
+                                    архитектуры, МТС</span></p>
+                            <p class="scheduleName scheduleName2">Дзюба Дмитрий <span>Руководитель центра RnD,
+                                    МТС</span></p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        «Archops и как мы до него дошли»
+                    </p>
+                    <p class="scheduleDescription">
+                        Если у вас небольшая команда в 5-10 человек, то архитектору достаточно уметь хорошо говорить.
+                        Если команда у вас 15-20 человек, то архитектор должен хорошо говорить и неплохо писать. Но что
+                        делать если у вас 100 команд по 10-20 человек? Тогда архитектору нужен Archops. Вот про него-то
+                        мы вам и расскажем.
+                    </p>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">14:30</p>
+                        <div>
+                            <p class="scheduleName">Сергей Гусев <span>Исполнительный директор, Управление технической
+                                    архитектуры, Сбер</span></p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        «Есть ли жизнь на платформе?»
+                    </p>
+                    <p class="scheduleDescription">
+                        В современном ИТ мире термин "платформа" используется почти повсеместно практически для любых
+                        аспектов деятельности. Тем не менее, для разработчиков зачастую этот термин вызывает стойкое
+                        отторжение и нежелание использовать корпоративные наработки. Разберёмся, что же это за зверь
+                        такой - платформа, зачем её создают и что с ней может пойти не так.
+                    </p>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">15:00</p>
+                        <div>
+                            <p class="scheduleName">Наталья Хапаева <span>Владелец продукта, МТС</span></p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        «Технорадар как инструмент изменения ландшафта»
+                    </p>
+                    <p class="scheduleDescription">
+                        Технологический радар - инструмент для визуализации стека технологий, которые попали в поле
+                        зрения организации.
+                    </p>
+                    <p class="scheduleDescription">
+                        В докладе я расскажу, как мы в Big Data МТС используем технологический радар для упрощения
+                        коммуникаций и как он связан с нашим R&D процессом. Также немного коснусь технической реализации
+                        этого решения.
+                    </p>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">15:30</p>
+                        <div>
+                            <p class="scheduleName">Григорий Коваль <span>Технический руководитель Core Data Lake Big
+                                    Data, MTS</span></p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        «Монолитное хранилище данных и распределенный Data Mesh - в чем отличия и сходство?»
+                    </p>
+                    <p class="scheduleDescription">
+                        Расскажу про организацию работы с данными в Data Lake МТС. У нас общий объем данных хранилищ
+                        порядка 10 петабайт, поэтому не все подходы хранения и работы с данными мы можем применить.
+                    </p>
+                    <p class="scheduleDescription">
+                        Сейчас мы сливаем корпоративное хранилище и data lake, избавляемся от легаси и приближаем данные
+                        к real-time, делаем архитектуру с возможностью масштабирования и улучшаем качество данных.
+                        Расскажу про начало data mesh и как с ним можно не плодить хранилища.
+                    </p>
+                </div>
+
+                <div class="schedule">
+                    <div class="scheduleTop">
+                        <p class="scheduleTime">16:00</p>
+                        <div>
+                            <p class="scheduleName scheduleNameLast">Дзюба Д., Гусев С., Петрухин А., Хапаева Н., Коваль
+                                Г.</p>
+                        </div>
+                    </div>
+                    <p class="scheduleDescription scheduleDescriptionTop">
+                        Круглый стол по вопросам архитектуры
+                    </p>
+                </div>
+
+                <img src="./images/shape/6.png" alt="" class="shape6">
+                <img src="./images/shape/2.png" alt="" class="shape2">
+                <img src="./images/shape/3.png" alt="" class="shape3">
+                <img src="./images/shape/4.png" alt="" class="shape4">
+                <img src="./images/shape/5.png" alt="" class="shape5">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

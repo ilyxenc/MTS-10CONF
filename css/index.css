@@ -1,0 +1,576 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background: #000000;
+    position: relative;
+    min-height: 100vh;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    /* font-smoothing: antialiased; */
+    overflow: hidden;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+}
+
+.body {
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.blockMax1170 {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 22px;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.marginTop1 {
+    margin-top: 60px;
+}
+
+.video {
+    max-width: 734px;
+    width: 62.7%;
+    margin-right: 20px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.videoFrame {
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.chat1 {
+    height: 100%;
+    width: 35.6%;
+    max-width: 416px;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.chat1 .chatLabel {
+    background-color: #CD1719;
+}
+
+.chat2 {
+    margin-top: 20px;
+    height: 240px;
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.chat2 .chatLabel {
+    background-color: #CD1719;
+}
+
+.chatLabel {
+    width: 100%;
+    padding: 12px 16px;
+    box-sizing: inherit;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chatLabelText {
+    font-family: 'MTS Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.messages {
+    height: calc(100% - 46px - 20px - 52px - 16px);
+    width: 100%;
+    box-sizing: inherit;
+    padding: 0 20px;
+    margin: 0 auto 20px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.inputField {
+    height: 52px;
+    width: 100%;
+    box-sizing: inherit;
+    position: relative;
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+emoji-picker {
+    position: absolute;
+    z-index: 2 !important;
+    width: calc(100% + 2px);
+    top: calc(100% + 1px);
+    left: -1px;
+    display: none;
+    font-family: 'Roboto Mono';
+}
+
+.messageName {
+    font-family: 'MTS Sans';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    padding: 1px 8px;
+    border-radius: 100px;
+    background-color: #CD1719;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.message {
+    margin-top: 16px;
+}
+
+.messageText {
+    font-family: 'Roboto Mono';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #AAAAAA;
+    display: block;
+}
+
+.messageMine {
+    text-align: right;
+}
+
+.messageMine .messageText {
+    text-align: right;
+}
+
+.chat2 .messageName {
+    background-color: #CD1719;
+}
+
+.inputFieldBg {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: inherit;
+}
+
+.chatSend {
+    padding: 14px 16px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+}
+
+.input {
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    resize: none;
+    outline: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding: 16px 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    width: calc(100% - 132px);
+}
+
+.input::placeholder {
+    color: #FFFFFF;
+}
+
+.inputEmoji {
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding: 16px 4px 16px 15px;
+    cursor: pointer;
+}
+
+.inputSticker {
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding: 16px 12px 16px 4px;
+    cursor: pointer;
+}
+
+.chat2 .input {
+    padding: 16px 0 16px 15px;
+    width: calc(100% - 71px);
+}
+
+.shape1 {
+    max-width: 1940px;
+    width: 160.7%;
+    height: auto;
+    display: block;
+    position: absolute;
+    right: -94.4%;
+    top: -60px;
+    z-index: -1;
+}
+
+.caption {
+    font-family: 'MTS Sans';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.scheduleBlock {
+    position: inherit;
+    width: 100%;
+    margin-top: 32px;
+    padding-bottom: 60px;
+}
+
+.schedule {
+    border: 1px solid #5DB130;
+    box-sizing: border-box;
+    padding: 19px;
+    margin-top: 12px;
+}
+
+.scheduleDescription {
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.scheduleTop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.scheduleTime {
+    width: 100px;
+    font-family: 'MTS Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.scheduleName {
+    font-family: 'Roboto Mono';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+}
+
+.scheduleName span {
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 4px;
+    opacity: 0.6;
+    margin-left: 12px;
+    display: block;
+}
+
+.scheduleName2 {
+    margin-top: 6px;
+}
+
+.scheduleDescriptionTop {
+    margin-top: 15px;
+    line-height: 18px;
+}
+
+.scheduleNameLast {
+    font-size: 14px;
+}
+
+.shape2 {
+    width: 41.9%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -32.4%;
+    z-index: -1;
+}
+
+.shape3 {
+    width: 33.33%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 149px;
+    left: 12.4%;
+    z-index: -1;
+}
+
+.shape4 {
+    width: 8.03%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 1.7%;
+    z-index: -1;
+}
+
+.shape5 {
+    width: 167.01%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -85.3%;
+    z-index: -1;
+}
+
+.shape6 {
+    width: 64.19%;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -29.5%;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .marginTop1 {
+        margin-top: 63px;
+    }
+    .video {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    #video {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto !important;
+    }
+    .chat1 {
+        height: 360px;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .chat1 .chatLabel, .chat2 .chatLabel, .chat2 .messageName {
+        background-color: #CD1719;
+    }
+    .caption {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .scheduleName {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .scheduleTime {
+        width: 80px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .scheduleName span {
+        margin-top: 3px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .scheduleDescription {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .shape1 {
+        width: 226.52%;
+        right: -116.3%;
+        opacity: 0.6;
+    }
+    .shape6 {
+        width: 84.53%;
+        right: -33.43%;
+    }
+    .shape2 {
+        width: 47.38%;
+        right: -32.73%;
+        bottom: 245px;
+    }
+    .shape3 {
+        width: 53.87%;
+        top: 133px;
+        left: 13.53%;
+    }
+    .shape4 {
+        width: 13%;
+        right: 2.77%;
+    }
+    .shape5 {
+        width: 226.52%;
+        bottom: 0;
+        left: -108%;
+        opacity: 0.6;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .marginTop1 {
+        margin-top: 60px;
+    }
+    .chatLabelText {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .inputField {
+        padding: 0 12px;
+        margin-bottom: 12px;
+    }
+    .messages {
+        padding: 0 12px;
+    }
+    .inputField {
+        height: 42px;
+    }
+    .chatSend {
+        padding: 8px 16px 8px 12px;
+    }
+    .input {
+        font-size: 12px;
+        line-height: 16px;
+        width: calc(100% - 108px);
+    }
+    .blockMax1170 {
+        padding: 0 10px;
+    }
+    .scheduleTop {
+        flex-direction: column;
+    }
+    .scheduleName {
+        flex-direction: column;
+        margin-top: 8px;
+    }
+    .scheduleName span {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+    .scheduleName2 {
+        margin-top: 6px;
+    }
+    .scheduleDescriptionTop {
+        margin-top: 16px;
+    }
+    .schedule {
+        padding: 11px
+    }
+    .scheduleNameLast {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .shape1 {
+        width: 240%;
+        right: -80%;
+        opacity: 0.3;
+    }
+    .shape6 {
+        width: 114%;
+        right: -47%;
+    }
+    .shape2 {
+        width: 49%;
+        bottom: 930px;
+    }
+    .shape3 {
+        width: 130%;
+        left: 13.33%;
+        top: 380px;
+    }
+    .shape4 {
+        width: 31.33%;
+        right: 6.67%;
+        top: 97px;
+    }
+    .shape5 {
+        width: 380%;
+        left: -203%;
+    }
+}
