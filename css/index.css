@@ -511,6 +511,12 @@ emoji-picker {
     .inputField {
         height: 42px;
     }
+    .inputEmoji {
+        padding: 11px 4px 11px 15px;
+    }
+    .inputSticker {
+        padding: 11px 12px 11px 4px;
+    }
     .chatSend {
         padding: 8px 16px 8px 12px;
     }
