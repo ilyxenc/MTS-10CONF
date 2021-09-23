@@ -84,10 +84,22 @@
                 <div class="inputField">
                     <div class="inputFieldBg">
                         <img src="./images/icon/emoji.png" alt="" class="inputEmoji" onclick="showEmoji();">
-                        <img src="./images/icon/sticker.png" alt="" class="inputSticker">
+                        <img src="./images/icon/sticker.png" alt="" class="inputSticker" onclick="showSticker();">
                         <textarea class="input" id="textarea" name="message" rows="1" value=""
                             placeholder="Введите сообщение"></textarea>
                         <img src="./images/icon/send-2.png" alt="" class="chatSend">
+
+                        <div id="stickers" data-show="0">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                            <img src="./images/sticker/1.png" alt="" class="sticker">
+                        </div>
 
                         <emoji-picker class="dark" id="emoji1" data-show="0" locale="ru"></emoji-picker>
                         <script>
@@ -99,6 +111,18 @@
                                 document.querySelector("#textarea").focus();
                                 document.querySelector("#textarea").selectionEnd = position + document.querySelector("#textarea").value.length - lenOld;
                             });
+
+                            let showSticker = () => {
+                                let status = document.querySelector('#stickers').dataset.show;
+
+                                if (status == 0) {
+                                    document.querySelector('#stickers').style.display = "flex";
+                                    document.querySelector('#stickers').dataset.show = 1;
+                                } else {
+                                    document.querySelector('#stickers').style.display = "none";
+                                    document.querySelector('#stickers').dataset.show = 0;
+                                }
+                            }
 
                             let showEmoji = () => {
                                 let status = document.querySelector('#emoji1').dataset.show;
