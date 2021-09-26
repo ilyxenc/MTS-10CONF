@@ -159,7 +159,7 @@ emoji-picker {
     position: absolute;
     z-index: 2 !important;
     width: calc(100% + 2px);
-    height: 64px;
+    height: 72px;
     box-sizing: border-box;
     padding-left: 8px;
     bottom: calc(100% + 5px);
@@ -172,10 +172,24 @@ emoji-picker {
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 #stickers::-webkit-scrollbar {
-    display: none;
+    width: 0;
+    height: 8px;
+}
+
+#stickers::-webkit-scrollbar-track {
+    background: #484848;
+    border-radius: 0px;
+    margin-bottom: 2px;
+}
+
+#stickers::-webkit-scrollbar-thumb {
+    background-color: #CD1719;
+    border-radius: 0px;
 }
 
 .sticker {
